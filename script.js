@@ -15,6 +15,7 @@ function generateRandomResult() {
     filteredData = data.filter(option => option.variable === filterSelect.value);
   }
   // code to generate random result from filteredData
+    fetch("data.csv")
   resultContainer.textContent = "Random result goes here";
 }
 
