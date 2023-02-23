@@ -5,12 +5,19 @@ const resultContainer = document.getElementById("result-container");
 let data = [];
 
 function generateRandomResult() {
-  let filteredData = data;
-  if (filterSelect.value !== "") {
-    filteredData = data.filter(option => option.variable === filterSelect.value);
+  var filter = document.getElementById("filter-select").value;
+  var filteredData = data;
+  if (filter !== "") {
+    filteredData = data.filter(function (row) {
+      return row.Type === filter;
+    });
   }
-  const randomIndex = Math.floor(Math.random() * filteredData.length);
-  resultContainer.textContent = filteredData[randomIndex].name;
+  var randomIndex = Math.floor(Math.random() * filteredData.length);
+  var randomItem = filteredData[randomIndex];
+  var resultContainer = document.getElementById("result-container");
+  resultContainer.innerHTML = randomItem.Name;
+}
+
 }
 
 function resetResult() {
