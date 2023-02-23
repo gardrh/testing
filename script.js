@@ -2,21 +2,15 @@ const generateBtn = document.getElementById("generate-btn");
 const resetBtn = document.getElementById("reset-btn");
 const filterSelect = document.getElementById("filter-select");
 const resultContainer = document.getElementById("result-container");
-const data = [
-  { name: "Vegetar", variable: "Vegetar" },
-  { name: "Kjøtt", variable: "Kjøtt" },
-  { name: "Fisk", variable: "Fisk" },
-
-];
+let data = [];
 
 function generateRandomResult() {
   let filteredData = data;
   if (filterSelect.value !== "") {
     filteredData = data.filter(option => option.variable === filterSelect.value);
   }
-  // code to generate random result from filteredData
-    fetch("data.csv")
-  resultContainer.textContent = "Random result goes here";
+  const randomIndex = Math.floor(Math.random() * filteredData.length);
+  resultContainer.textContent = filteredData[randomIndex].name;
 }
 
 function resetResult() {
@@ -26,3 +20,19 @@ function resetResult() {
 generateBtn.addEventListener("click", generateRandomResult);
 resetBtn.addEventListener("click", resetResult);
 filterSelect.addEventListener("change", generateRandomResult);
+
+fetch("data.csv")
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.trim().split('\n');
+    const headers = rows.shift().split(',');
+    data = rows.map(row => {
+      const values = row.split(',');
+      const obj = {};
+      headers.forEach((header, index) => {
+        obj[header] = values[index];
+      });
+      return obj;
+    });
+  })
+  .catch(error => console.log(error));
