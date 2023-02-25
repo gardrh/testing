@@ -23,8 +23,7 @@ generateBtn.addEventListener("click", () => {
       .then(csvData => {
         const parsedData = Papa.parse(csvData, { header: true }).data;
         const numRows = parsedData.length;
-        const numRowsElement = document.getElementById('num-rows');
-        numRowsElement.textContent = `Number of rows: ${numRows}`;
+        getResult(numRows);
       })
       .catch(error => console.error(error));
   });
