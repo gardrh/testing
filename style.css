@@ -50,7 +50,7 @@ background-color: #1F858D;
     			text-align: center; /* Center text */
       			text-decoration: none; /* Remove underline */
 			border: none;
-			border-radius: 10%;
+			border-radius: 0%;
 			cursor: pointer;
 			transition: transform 0.2s ease-in-out; /* add transition effect */
 			font-size: 1.4em;
@@ -61,6 +61,8 @@ background-color: #1F858D;
 
 
 #back-button:hover {
-  background-color: #3e8e41; /* Darker green on hover */
+  background-color: #E39121; /* Darker green on hover */
 }
 
+		#back-button:active {
+  transform: translateX(20px); /* move button down on press */
