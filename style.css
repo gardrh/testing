@@ -65,4 +65,4 @@ background-color: #1F858D;
 }
 
 		#back-button:active {
-  transform: translateX(20px); /* move button down on press */
+  transform: translateY(34px); /* move button down on press */
