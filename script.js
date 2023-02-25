@@ -26,6 +26,6 @@ fetch('data.csv')
     const count = rows.length - 1;
     // Update the dinner-count element with the count
     const dinnerCountElement = document.getElementById('dinner-count');
-    dinnerCountElement.textContent = `There are ${count} dinners to choose from.`;
+    dinnerCountElement.textContent = `Det er ${count} å velge mellom.`;
   })
   .catch(error => console.error(error));
