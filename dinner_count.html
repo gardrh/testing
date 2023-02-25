@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number of Dinners</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Number of Dinners</h1>
+	<div id="count-container"></div>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="script.js"></script>
+	<script>
+		// Load the data from the CSV file
+		var data;
+		d3.csv("data.csv", function (csvData) {
+			data = csvData;
+			// Call the function to display the count of rows
+			displayDinnerCount();
+		});
+
+		function displayDinnerCount() {
+			var dinnerCount = 0;
+			data.forEach(function (row) {
+				dinnerCount += parseInt(row.Antall);
+			});
+			var countContainer = document.getElementById("count-container");
+			countContainer.innerHTML = "Number of dinners: " + dinnerCount;
+		}
+	</script>
+</body>
+</html>
