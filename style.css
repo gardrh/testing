@@ -45,8 +45,20 @@ body {
 
 
 #back-button:hover {
-  background-color: ##1f8d7e; /* Darker green on hover */
+  background-color: ##black; /* Darker green on hover */
 }
 
 		#back-button:active {
   transform: translateY(34px); /* move button down on press */
+			
+
+#dinner-count {
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ddd; /* Gray border */
+  color: #666; /* Gray text */
+  padding: 10px; /* Padding */
+  text-align: center; /* Center text */
+  margin: 10px; /* Add margin */
+  border-radius: 4px; /* Add rounded corners */
+}
+
