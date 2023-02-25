@@ -1,21 +1,104 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<link rel="stylesheet" href="style.css">
+<body style="background-color:#F3F3F3;">
+
 <head>
-	<title>Random Result !!</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZZFNMNS8Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PZZFNMNS8Z');
+</script>	
+	
+	<title> ETETID!</title>
+	
+	<style>
+		/* Style the button */
+		#generate-btn {
+			background-color: #1F858D;
+			color: #E39120;
+			font-weight: bold;
+			padding-top: 1px ;
+			padding-bottom: 1px;
+			height: 170px;
+			width: 170px;
+			border: none;
+			border-radius: 100%;
+			cursor: pointer;
+			transition: transform 0.2s ease-in-out; /* add transition effect */
+			font-size: 1.7em;
+			font-color: orange;
+			margin-bottom: 1em;
+		}
+		
+		#generate-btn:active {
+  transform: translateY(20px); /* move button down on press */
+}
+
+		/* Style the result div */
+		.result {
+			font-size: 1em;
+			margin-top: 0.2em;
+			padding: 0.5em;
+			background-color: #F3F3F3;
+			border-radius: 2px;
+		}
+	</style>
+	
+	<style>
+		/* Style the button */
+		#generate-btn1 {
+			background-color: #1F858D;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 2em;
+			font-color: #E39120;
+			margin-bottom: 1em;
+		}
+
+		/* Style the result div */
+		.result1 {
+			font-size: 2em;
+			margin-top: 1em;
+			padding: 1em;
+			background-color: #F3F3F3;
+			border-radius: 4px;
+		}
+	</style>
+
 </head>
+	
+
 <body>
+
+	<p> Har du noen gang stilt deg selv spørsmålet: </p>
+</body>
+
+<body>
+	<h1> HVA SKAL JEG SPISE TIL MIDDAG I DAG?</H1>
 	<div class="button-container">
-		<button id="generate-btn">Generate Random Result</button>
-		<button id="reset-btn">Reset</button>
-		<select id="filter-select">
-			<option value="">All Options</option>
-			<option value="Vegetar">Vegetar</option>
-			<option value="Fisk">Fisk</option>
-			<option value="Kjøtt">Kjøtt</option>
-		</select>
-	</div>
-	<div id="result-container"></div>
+	<button id="generate-btn">MIDDAG!</button></div>
+	<div class="result"></div>
+	<div class="button-container"></div>
+
 	<script src="script.js"></script>
 </body>
+	<h2> Buen provecho!</H1>
+	
+	<p> Hilsen Gard </p>
+
+
+</body>
+
 </html>
