@@ -36,3 +36,23 @@ body {
 #dinner-count {
   font-size: 24px;
 }
+
+
+#back-button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  padding: 12px 24px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as a block element */
+  font-size: 16px; /* Font size */
+  margin: 10px; /* Add margin */
+  cursor: pointer; /* Add cursor on hover */
+  border-radius: 4px; /* Add rounded corners */
+}
+
+#back-button:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
