@@ -29,3 +29,6 @@ d3.csv("data.csv").then(function(data) {
   dinnerCountElement.innerHTML = "Total number of dinners: " + dinnerCount;
 });
 
+function navigateToIndex() {
+  window.location.href = "index.html";
+}
