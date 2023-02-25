@@ -22,3 +22,17 @@ body {
 .button-container {
   text-align: center; /* center buttons horizontally */
 }
+
+#dinner-count-container {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center; /* center text */
+  margin: auto; /* center horizontally */
+  display: flex; /* center vertically */
+  flex-direction: column; /* center vertically */
+  justify-content: center; /* center vertically */
+}
+
+#dinner-count {
+  font-size: 24px;
+}
