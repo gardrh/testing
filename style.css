@@ -39,21 +39,28 @@ body {
 
 
 #back-button {
-  background-color: #4CAF50; /* Green background */
-  border: none; /* Remove border */
-  color: white; /* White text */
-  padding: 12px 24px; /* Padding */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Display as a block element */
-  font-size: 16px; /* Font size */
-  margin: 10px; /* Add margin */
-  cursor: pointer; /* Add cursor on hover */
-  border-radius: 4px; /* Add rounded corners */
-}
+
+background-color: #1F858D;
+			color: #E39120;
+			font-weight: bold;
+			padding-top: 1px ;
+			padding-bottom: 1px;
+			height: 40;
+			width: 60;
+     text-align: center; /* Center text */
+      text-decoration: none; /* Remove underline */
+			border: none;
+			border-radius: 20%;
+			cursor: pointer;
+			transition: transform 0.2s ease-in-out; /* add transition effect */
+			font-size: 1.7em;
+			font-color: orange;
+			margin-bottom: 1em;
+		}
+
+
 
 #back-button:hover {
   background-color: #3e8e41; /* Darker green on hover */
 }
-
 
