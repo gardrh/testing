@@ -47,13 +47,13 @@ background-color: #1F858D;
 			padding-bottom: 1px;
 			height: 40;
 			width: 60;
-     text-align: center; /* Center text */
-      text-decoration: none; /* Remove underline */
+    			text-align: center; /* Center text */
+      			text-decoration: none; /* Remove underline */
 			border: none;
-			border-radius: 20%;
+			border-radius: 10%;
 			cursor: pointer;
 			transition: transform 0.2s ease-in-out; /* add transition effect */
-			font-size: 1.7em;
+			font-size: 1.4em;
 			font-color: orange;
 			margin-bottom: 1em;
 		}
