@@ -16,13 +16,18 @@ generateBtn.addEventListener("click", () => {
 });
 
 
+  function getResult(numRows) {
+    const numRowsElement = document.getElementById('num-rows');
+    numRowsElement.textContent = `Number of rows: ${numRows}`;
+  }
+
   const countButton = document.getElementById('count-button');
   countButton.addEventListener('click', () => {
     fetch('data.csv')
       .then(response => response.text())
       .then(csvData => {
-        const parsedData = Papa.parse(csvData, { header: true }).data;
-        const numRows = parsedData.length;
+        const rows = csvData.split('\n');
+        const numRows = rows.length;
         getResult(numRows);
       })
       .catch(error => console.error(error));
