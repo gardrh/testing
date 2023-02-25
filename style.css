@@ -37,6 +37,41 @@ body {
   font-size: 24px;
 }
 
+<style>
+		/* Style the button */
+		#generate-btn {
+			background-color: #1F858D;
+			color: #E39120;
+			font-weight: bold;
+			padding-top: 1px ;
+			padding-bottom: 1px;
+			height: 170px;
+			width: 170px;
+			border: none;
+			border-radius: 100%;
+			cursor: pointer;
+			transition: transform 0.2s ease-in-out; /* add transition effect */
+			font-size: 1.7em;
+			font-color: orange;
+			margin-bottom: 1em;
+		}
+		
+		#generate-btn:active {
+  transform: translateY(20px); /* move button down on press */
+}
+
+		/* Style the result div */
+		.result {
+			font-size: 1em;
+			margin-top: 0.2em;
+			padding: 0.5em;
+			background-color: #F3F3F3;
+			border-radius: 2px;
+		}
+	</style>
+	
+
+
 
 #back-button {
 
