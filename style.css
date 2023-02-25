@@ -27,17 +27,14 @@ body {
 #dinner-count {
   background-color: #f2f2f2; /* Light gray background */
   border: 1px solid #ddd; /* Gray border */
-  color: #666; /* Gray text */
+  color: #black; /* Gray text */
   padding: 10px; /* Padding */
   text-align: center; /* Center text */
-  margin: 10px; /* Add margin */
-  border-radius: 4px; /* Add rounded corners */
 }
 
 
 #back-button {
 
-background-color: #1F858D;
 			background-color: #1F858D;
 			color: #E39120;
 			font-weight: bold;
