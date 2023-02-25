@@ -16,16 +16,13 @@ generateBtn.addEventListener("click", () => {
 });
 
 
-// Fetch the data.csv file
-fetch('data.csv')
-  .then(response => response.text())
-  .then(data => {
-    // Split the data into an array of rows
-    const rows = data.trim().split('\n');
-    // Count the number of rows (subtracting 1 for the header row)
-    const count = rows.length - 1;
-    // Update the dinner-count element with the count
-    const dinnerCountElement = document.getElementById('dinner-count');
-    dinnerCountElement.textContent = `Det er ${count} å velge mellom.`;
-  })
-  .catch(error => console.error(error));
+function countRows() {
+  fetch('data.csv')
+    .then(response => response.text())
+    .then(text => {
+      const row_count = text.trim().split('\n').length;
+      const dinner_count_element = document.getElementById('dinner-count');
+      dinner_count_element.innerText = `Antall middager: ${row_count}`;
+    })
+    .catch(error => console.log(error));
+}
