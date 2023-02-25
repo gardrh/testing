@@ -23,19 +23,17 @@ body {
   text-align: center; /* center buttons horizontally */
 }
 
-#dinner-count-container {
-  background-color: #f2f2f2;
-  padding: 10px;
-  text-align: center; /* center text */
-  margin: auto; /* center horizontally */
-  display: flex; /* center vertically */
-  flex-direction: column; /* center vertically */
-  justify-content: center; /* center vertically */
-}
 
 #dinner-count {
-  font-size: 24px;
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ddd; /* Gray border */
+  color: #666; /* Gray text */
+  padding: 10px; /* Padding */
+  text-align: center; /* Center text */
+  margin: 10px; /* Add margin */
+  border-radius: 4px; /* Add rounded corners */
 }
+
 
 #back-button {
 
