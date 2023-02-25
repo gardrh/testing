@@ -1,31 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Number of Dinners</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<h1>Number of Dinners</h1>
-	<div id="count-container"></div>
-	<script src="https://d3js.org/d3.v7.min.js"></script>
-	<script src="script.js"></script>
-	<script>
-		// Load the data from the CSV file
-		var data;
-		d3.csv("data.csv", function (csvData) {
-			data = csvData;
-			// Call the function to display the count of rows
-			displayDinnerCount();
-		});
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<link rel="stylesheet" href="style.css">
+<body style="background-color:#F3F3F3;">
 
-		function displayDinnerCount() {
-			var dinnerCount = 0;
-			data.forEach(function (row) {
-				dinnerCount += parseInt(row.Antall);
-			});
-			var countContainer = document.getElementById("count-container");
-			countContainer.innerHTML = "Number of dinners: " + dinnerCount;
+<head>
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZZFNMNS8Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PZZFNMNS8Z');
+</script>	
+	
+	<title> ETETID!</title>
+	
+	<style>
+		/* Style the button */
+		#generate-btn {
+			background-color: #1F858D;
+			color: #E39120;
+			font-weight: bold;
+			padding-top: 1px ;
+			padding-bottom: 1px;
+			height: 170px;
+			width: 170px;
+			border: none;
+			border-radius: 100%;
+			cursor: pointer;
+			transition: transform 0.2s ease-in-out; /* add transition effect */
+			font-size: 1.7em;
+			font-color: orange;
+			margin-bottom: 1em;
 		}
-	</script>
+		
+		#generate-btn:active {
+  transform: translateY(20px); /* move button down on press */
+}
+
+		/* Style the result div */
+		.result {
+			font-size: 1em;
+			margin-top: 0.2em;
+			padding: 0.5em;
+			background-color: #F3F3F3;
+			border-radius: 2px;
+		}
+	</style>
+	
+	<style>
+		/* Style the button */
+		#generate-btn1 {
+			background-color: #1F858D;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 2em;
+			font-color: #E39120;
+			margin-bottom: 1em;
+		}
+
+		/* Style the result div */
+		.result1 {
+			font-size: 2em;
+			margin-top: 1em;
+			padding: 1em;
+			background-color: #F3F3F3;
+			border-radius: 4px;
+		}
+	</style>
+
+</head>
+	<h1> Hvor mange middager er det i lista?</h1>
+
+<div id="dinner-count"></div>
+
+	<h2> Buen provecho!</H1>
+	
+	<p> Hilsen Gard </p>
+
+
 </body>
+
 </html>
