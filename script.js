@@ -16,13 +16,12 @@ generateBtn.addEventListener("click", () => {
 });
 
 
-function countRows() {
-  fetch('data.csv')
-    .then(response => response.text())
-    .then(text => {
-      const row_count = text.trim().split('\n').length;
-      const dinner_count_element = document.getElementById('dinner-count');
-      dinner_count_element.innerText = `Antall middager: ${row_count}`;
-    })
-    .catch(error => console.log(error));
-}
+fetch('data.csv')
+  .then(response => response.text())
+  .then(csvData => {
+    const parsedData = Papa.parse(csvData, { header: true }).data;
+    const numRows = parsedData.length;
+    const numRowsElement = document.getElementById('num-rows');
+    numRowsElement.textContent = `Number of rows: ${numRows}`;
+  })
+  .catch(error => console.error(error));
