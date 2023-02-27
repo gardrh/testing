@@ -16,19 +16,14 @@ generateBtn.addEventListener("click", () => {
 });
 
 
-  function getResult(numRows) {
-    const numRowsElement = document.getElementById('num-rows');
-    numRowsElement.textContent = `Number of rows: ${numRows}`;
-  }
+function countRows() {
+  fetch('data.csv')
+    .then(response => response.text())
+    .then(text => {
+      const row_count = text.trim().split('\n').length;
+      const dinner_count_element = document.getElementById('dinner-count');
+      dinner_count_element.innerText = `Antall middager: ${row_count}`;
+    })
+    .catch(error => console.log(error));
+}
 
-  const countButton = document.getElementById('count-button');
-  countButton.addEventListener('click', () => {
-    fetch('data.csv')
-      .then(response => response.text())
-      .then(csvData => {
-        const rows = csvData.split('\n');
-        const numRows = rows.length;
-        getResult(numRows);
-      })
-      .catch(error => console.error(error));
-  });
