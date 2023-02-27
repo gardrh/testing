@@ -16,14 +16,16 @@ generateBtn.addEventListener("click", () => {
 });
 
 
-function countRows() {
-  fetch('data.csv')
-    .then(response => response.text())
-    .then(text => {
-      const row_count = text.trim().split('\n').length;
-      const dinner_count_element = document.getElementById('dinner-count');
-      dinner_count_element.innerText = `Antall middager: ${row_count}`;
-    })
-    .catch(error => console.log(error));
-}
+	var request = new XMLHttpRequest();
+		request.open("GET", "data.csv", true);
+		request.onload = function() {
+			// Parse the CSV data
+			var csvData = request.responseText;
+			var csvRows = csvData.split("\n");
+			var rowCount = csvRows.length;
 
+			// Update the HTML element with the row count
+			var resultElement = document.getElementById("result");
+			resultElement.innerHTML = "The CSV file has " + rowCount + " rows.";
+		};
+		request.send();
